@@ -49,5 +49,14 @@ export default function MainHall() {
           }
         })}
       </div>
+      {groups.map((group)=>{
+          return group.seats.map((seat)=>{
+            return (
+              seatsTaken= [...seatsTaken,{s:seat.seat, r:seat.row}])
+          })
+        })}
+        
+        {console.log("seats taken=",seatsTaken)}
+
   </>;
 }
