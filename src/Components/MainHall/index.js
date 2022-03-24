@@ -3,6 +3,11 @@ import { groups } from "../../Data/group";
 
 export default function MainHall() {
   console.log("Layout", layout);
+  let seatsTaken=[{
+    s:0,
+    r:0
+  }]
+  
   return <>
   <ul class="showcase">
         <li>
