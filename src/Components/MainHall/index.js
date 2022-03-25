@@ -2,27 +2,30 @@ import { layout } from "../../Data/layout";
 import { groups } from "../../Data/group";
 import SeatingLayout from "../SeatingLayout";
 
-export default function MainHall() {
-  console.log("Layout", layout);
-  
+export default function MainHall(props) {
+  // console.log("Layout", layout);
+  const { layoutSeating } = props;
+  console.log("in main hall", props);
+
   return (
     <>
-    <SeatingLayout/>
-      <ul class="showcase">
+      {/* <SeatingLayout /> */}
+
+      <ul className="showcase">
         <li>
-          <div class="r1"></div>
+          <div className="r1"></div>
           <small>Rank 1</small>
         </li>
         <li>
-          <div class="r2"></div>
+          <div className="r2"></div>
           <small>Rank 2</small>
         </li>
         <li>
-          <div class="r3"></div>
+          <div className="r3"></div>
           <small>Rank 3</small>
         </li>
       </ul>
-      
+
       {/* {groups.map((group) => {
         return group.seats.map((seat) => {
           return seatsTaken = [...seatsTaken, { s: seat.seat, r: seat.row }];
@@ -30,7 +33,6 @@ export default function MainHall() {
       })}
 
       {console.log("seats taken=", seatsTaken)} */}
-
 
       <div className="scontainer">
         <div className="screen mt-5"></div>
@@ -56,9 +58,6 @@ export default function MainHall() {
           }
         })}
       </div>
-
-      
-      
     </>
   );
 }
