@@ -6,7 +6,7 @@ export default function Home() {
     <Container className="mt-5">
       <h1>Welcome to Theater Seating Layout</h1>
       <h3>Want to reserve seats for you?? </h3>
-      <div className="section-container">
+      <div className="sectionContainer">
         <label> Select a section:</label>
         <select>
           <option value="mainHall">Main Hall</option>
