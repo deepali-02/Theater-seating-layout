@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Link to="/mainHall">
+      <Link to="/seatingLayout">
         <Button>Reserve Seats!</Button>
       </Link>
     </Container>
