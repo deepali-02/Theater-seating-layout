@@ -3,35 +3,46 @@ import { groups } from "../../Data/group";
 
 export default function MainHall() {
   console.log("Layout", layout);
-  let seatsTaken=[{
-    s:0,
-    r:0
-  }]
-  
-  return <>
-  <ul class="showcase">
+  let seatsTaken = [
+    {
+      s: 0,
+      r: 0,
+    },
+  ];
+
+  return (
+    <>
+      <ul class="showcase">
         <li>
-          <div class="rank1"></div>
+          <div class="r1"></div>
           <small>Rank 1</small>
         </li>
         <li>
-          <div class="rank2"></div>
+          <div class="r2"></div>
           <small>Rank 2</small>
         </li>
         <li>
-          <div class="rank3"></div>
+          <div class="r3"></div>
           <small>Rank 3</small>
         </li>
       </ul>
+      
+      {/* {groups.map((group) => {
+        return group.seats.map((seat) => {
+          return seatsTaken = [...seatsTaken, { s: seat.seat, r: seat.row }];
+        });
+      })}
+
+      {console.log("seats taken=", seatsTaken)} */}
+
+
       <div className="scontainer">
         <div className="screen mt-5"></div>
       </div>
-  <div className="scontainer">
+      <div className="scontainer">
         {layout.sections.map((section) => {
           if (section.name === "main hall") {
             return section.rows.map((row) => {
-            
-
               return (
                 <>
                   <div className="row">
@@ -49,14 +60,9 @@ export default function MainHall() {
           }
         })}
       </div>
-      {groups.map((group)=>{
-          return group.seats.map((seat)=>{
-            return (
-              seatsTaken= [...seatsTaken,{s:seat.seat, r:seat.row}])
-          })
-        })}
-        
-        {console.log("seats taken=",seatsTaken)}
 
-  </>;
+      
+      
+    </>
+  );
 }
