@@ -50,7 +50,7 @@ export default function SeatingLayout() {
   // console.log("index",index)
   return (
     <div>
-      <MainHall layoutSeating={layoutWithSeating} />
+      <MainHall seatingLayout={layoutWithSeating} />
       
     </div>
   );

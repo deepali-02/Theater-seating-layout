@@ -4,7 +4,7 @@ import SeatingLayout from "../SeatingLayout";
 
 export default function MainHall(props) {
   // console.log("Layout", layout);
-  const { layoutSeating } = props;
+  const { seatingLayout } = props;
   console.log("in main hall", props);
 
   return (
