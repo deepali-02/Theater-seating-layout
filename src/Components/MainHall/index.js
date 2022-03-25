@@ -1,5 +1,6 @@
 import { layout } from "../../Data/layout";
 import { groups } from "../../Data/group";
+import SeatingLayout from "../SeatingLayout";
 
 export default function MainHall() {
   console.log("Layout", layout);
@@ -12,6 +13,7 @@ export default function MainHall() {
 
   return (
     <>
+    <SeatingLayout/>
       <ul class="showcase">
         <li>
           <div class="r1"></div>
