@@ -4,13 +4,7 @@ import SeatingLayout from "../SeatingLayout";
 
 export default function MainHall() {
   console.log("Layout", layout);
-  let seatsTaken = [
-    {
-      s: 0,
-      r: 0,
-    },
-  ];
-
+  
   return (
     <>
     <SeatingLayout/>
