@@ -14,7 +14,7 @@ export default function SeatingLayout() {
 
   const newLayout = { ranks: layout.ranks, sections: newLayoutSections };
 
-  //   console.log("New Layout", newLayout);
+  console.log("New Layout", newLayout);
 
   const layoutWithSeating = { ...newLayout };
 
@@ -43,15 +43,52 @@ export default function SeatingLayout() {
       };
     });
   });
-  console.log("Layout with seating arrengment", layoutWithSeating);
+  console.log(
+    "Layout with seating arrengment",
+    layoutWithSeating
+  );
 
   // const index= groups.findIndex(obj=>{return obj.id})
 
   // console.log("index",index)
+
+  // layoutWithSeating.sections.map((row, i) => {
+  //   return row[i].map((seat) => {
+  //     return seat.seat / seat.group;
+  //   });
+  // });
+
+    // Object.keys(layoutWithSeating.sections).map((section)=>{
+    //   return(
+    //     layoutWithSeating.sections["main hall"].map((row,i)=>{
+    //         return row[i].map((seat)=>{
+    //           return console.log(`seat: ${seat.seat}/${seat.group}`)
+    //         })
+    //     })
+    //   )
+    // })
+
+    Object.keys(layoutWithSeating.sections).map((section)=>{
+      return(
+        layoutWithSeating.sections["main hall"].map((row,i)=>{
+          return(
+          Object.keys(row).map((seat)=>{
+           return(
+             
+                console.log(`${row[seat].seat}/${row[seat].group}`)
+                
+        
+           )
+
+          })
+          )
+        })
+      )
+    })
+
   return (
     <div>
       <MainHall seatingLayout={layoutWithSeating} />
-      
     </div>
   );
 }
