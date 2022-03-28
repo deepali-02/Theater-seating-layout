@@ -15,4 +15,6 @@ export const groups = [
       { section: "main hall", row: "2", seat: "5" },
     ],
   },
+  
 ];
+
