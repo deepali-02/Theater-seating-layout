@@ -8,19 +8,49 @@ body {
   text-align: center;
 }
 
-.container{
-  margin-top: 50%;
+.container {
+  display: flex;
+  
+  margin-top: 10%;
   font-style: italic;
   justify-content: center;
   align-items: center;
 }
 
-button{
-width: 30%;
-height: 50%;
-border-radius: 5px;
-color: cornsilk;
-background-color: darkred;
+h1 {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  font-size:5vw;
+  
+}
+
+h3 {
+  color: red;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
+
+.button1:hover {
+  background-color: #4caf50;
+  color: white;
 }
 
 .section-container {
@@ -31,7 +61,7 @@ background-color: darkred;
   align-items: center;
 }
 
-.sectionContainer select,
+/* .sectionContainer select,
 input {
   background-color: #fff;
   border: 0;
@@ -43,37 +73,49 @@ input {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-}
+} */
 
 .screen {
   background-color: white;
-  height: 150px;
-  width: 70%;
+  height: 120px;
+  width: 100%;
+  margin: 15px, 0;
   /* margin-top: 5%; */
-  margin-left: 50%;
+  /* margin-left: 50%;
   margin-right: 50%;
-  transform: rotateX(-40deg);
-  box-shadow: 0 10px 10px 10px rgb(97, 116, 224);
+  margin-bottom: 10%; */
+  transform: rotateX(-48deg);
+  box-shadow: 0px 20px 20px 10px blue;
+}
+
+.screenContainer {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  perspective: 1000px;
+  margin-bottom: 30px;
 }
 .scontainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  perspective: 1000px;
-  margin-bottom: 30px;
+  /* perspective: 1000px;
+  margin-bottom: 30px; */
 }
 
 .showcase {
   display: flex;
   background: rgba(230, 217, 217, 0.945);
   padding: 5px 10px;
+  /* width: 20%; */
   margin-top: 5%;
-  margin-left: 35%;
+  margin-left: 30%;
+  margin-right: 30%;
   border-radius: 5px;
   /* color: white; */
-  width: 400px;
-  height: 50px;
+  /* width: 400px;
+  height: 50px; */
   list-style-type: none;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +125,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 .showcase li small {
   margin-left: 2px;
@@ -96,57 +138,52 @@ input {
 }
 
 .seat {
-  /* background-color: #444451; */
   height: 50px;
   width: 65px;
   color: rgb(21, 23, 24);
-  margin: 5px, 5px;
+  margin: 10px;
   font-size: 15px;
   text-align: center;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.r1{
-  background-color:darkcyan ;
- 
-  height: 16px;
-  width: 22px;
+.r1 {
+  background-color: darkcyan;
+
+  height: 26px;
+  width: 32px;;
   margin: 3px;
   font-size: 30px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.r2{
-  background-color:aqua ;
- 
-  height: 16px;
-  width: 22px;
+.r2 {
+  background-color: aqua;
+
+  height: 26px;
+  width: 32px;
   margin: 3px;
   font-size: 30px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.r3{
-  background-color:aquamarine ;
- 
-  height: 16px;
-  width: 22px;
+.r3 {
+  background-color: aquamarine;
+
+  height: 26px;
+  width: 32px;
   margin: 3px;
   font-size: 30px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
-/* .rank1:not(.sold):hover {
-  cursor: pointer;
-  transform: scale(1.2);
-} */
 
 .rank1 {
   margin: 5px;
   width: auto;
+  margin: 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: darkcyan;
@@ -155,6 +192,7 @@ input {
 .rank2 {
   margin: 5px;
   width: auto;
+  margin: 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: aqua;
@@ -163,6 +201,7 @@ input {
 .rank3 {
   margin: 5px;
   width: auto;
+  margin: 10px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: aquamarine;
