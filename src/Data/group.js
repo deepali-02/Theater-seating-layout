@@ -15,6 +15,13 @@ export const groups = [
       { section: "main hall", row: "2", seat: "5" },
     ],
   },
-  
+  {
+    id: "+31633333333",
+    seats: [
+      { section: "1st balcony", row: "3", seat: "5" },
+      { section: "1st balcony", row: "3", seat: "6" },
+      { section: "1st balcony", row: "3", seat: "2" },
+      { section: "1st balcony", row: "3", seat: "4" },
+    ],
+  },
 ];
-
