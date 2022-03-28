@@ -20,7 +20,7 @@ export default function Theater() {
           </li>
         </ul>
       </div>
-      <div className="scontainer">
+      <div className="screenContainer">
         <div className="screen mt-5"></div>
       </div>
 
