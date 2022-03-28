@@ -56,6 +56,31 @@ export default function MainHall({ seatingLayout }) {
       </div> */}
 
       <div className="scontainer">
+        {seatingLayout.map((section, i) => {
+          return (
+            i === 0 &&
+            section.map((row) => {
+              return (
+                <div className="row">
+                  {row.map((seat) => {
+                    return (
+                      <div className={seat.rank}>
+                        <div className="seat">
+                          {seat.group !== undefined
+                            ? `${seat.seat} [g${seat.group}]`
+                            : `${seat.seat}`}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })
+          );
+        })}
+      </div>
+
+      {/* <div className="scontainer">
         <div>
           {Object.keys(seatingLayout.sections).map((section) => {
             return seatingLayout.sections[section].map((row) => {
@@ -78,7 +103,7 @@ export default function MainHall({ seatingLayout }) {
             });
           })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
