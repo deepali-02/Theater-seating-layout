@@ -14,7 +14,21 @@ export default function SeatingLayout() {
 
   console.log("groups seats", groupSeats);
 
+  const groupObject = {};
 
+  groupSeats.forEach((groupSeat) => {
+    const { section, row, seat, group } = groupSeat;
+
+    if (!groupObject[section]) groupObject[section] = {};
+
+    if (!groupObject[section][row]) groupObject[section][row] = {};
+
+    groupObject[section][row][seat] = group;
+  });
+
+  console.log("group obj:", groupObject);
+
+  
 
 
 
