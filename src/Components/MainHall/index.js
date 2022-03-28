@@ -1,16 +1,12 @@
 import { layout } from "../../Data/layout";
-import { groups } from "../../Data/group";
-import SeatingLayout from "../SeatingLayout";
 
-export default function MainHall(props) {
-  // console.log("Layout", layout);
-  const { seatingLayout } = props;
-  console.log("in main hall", props);
+export default function MainHall({ seatingLayout }) {
+  console.log("Layout", layout);
+
+  console.log("in main hall", seatingLayout);
 
   return (
     <>
-      {/* <SeatingLayout /> */}
-
       <ul className="showcase">
         <li>
           <div className="r1"></div>
@@ -37,7 +33,7 @@ export default function MainHall(props) {
       <div className="scontainer">
         <div className="screen mt-5"></div>
       </div>
-      <div className="scontainer">
+      {/*  <div className="scontainer">
         {layout.sections.map((section) => {
           if (section.name === "main hall") {
             return section.rows.map((row) => {
@@ -57,6 +53,31 @@ export default function MainHall(props) {
             });
           }
         })}
+      </div> */}
+
+      <div className="scontainer">
+        <div>
+          {Object.keys(seatingLayout.sections).map((section) => {
+            return seatingLayout.sections[section].map((row) => {
+              return (
+                <div className="row">
+                  {section === "main hall" &&
+                    Object.keys(row).map((seat) => {
+                      return (
+                        <div className={row[seat].rank}>
+                          <div className="seat">
+                            {row[seat].group === undefined
+                              ? row[seat].seat
+                              : `${row[seat].seat}[${row[seat].group}]`}
+                          </div>
+                        </div>
+                      );
+                    })}
+                </div>
+              );
+            });
+          })}
+        </div>
       </div>
     </>
   );
