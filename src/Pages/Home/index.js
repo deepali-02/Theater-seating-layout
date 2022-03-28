@@ -5,7 +5,7 @@ export default function Home() {
     <div className="container">
       <h1>Welcome to Theater Seating Layout</h1>
 
-      <Link to="/seatingLayout">
+      <Link to="/theater">
         <button>Show Seats!</button>
       </Link>
     </div>
