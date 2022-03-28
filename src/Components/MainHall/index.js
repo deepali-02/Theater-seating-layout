@@ -1,13 +1,10 @@
-import { layout } from "../../Data/layout";
-
 export default function MainHall({ seatingLayout }) {
-  console.log("Layout", layout);
-
-  console.log("in main hall", seatingLayout);
+  // console.log("in main hall", seatingLayout);
 
   return (
     <>
       <div className="scontainer">
+      <div><h3>Main Hall</h3></div>
         {seatingLayout.map((section, i) => {
           return (
             i === 0 &&
