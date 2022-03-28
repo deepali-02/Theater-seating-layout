@@ -3,7 +3,6 @@ import { groups } from "../../Data/group";
 import MainHall from "../MainHall";
 
 export default function SeatingLayout() {
-
   const groupSeats = [];
 
   groups.forEach((group, groupIndex) => {
@@ -54,18 +53,6 @@ export default function SeatingLayout() {
 
   console.log("layoutWithGroups", layoutWithGroups);
 
-
-
-
-
-
-
-
-
-
-
-
-
   // const newLayoutSections = layout.sections.reduce((acc, section) => {
   //   return {
   //     ...acc,
@@ -111,7 +98,7 @@ export default function SeatingLayout() {
 
   return (
     <div>
-      <MainHall />
+      <MainHall seatingLayout={layoutWithGroups} />
     </div>
   );
 }
