@@ -28,7 +28,32 @@ export default function SeatingLayout() {
 
   console.log("group obj:", groupObject);
 
-  
+  const layoutWithGroups = layout.sections.map((section) => {
+    return section.rows.map((row) => {
+      return row.seats.map((seat) => {
+        // console.log(
+        //   groupObject[section.name][row.row] &&
+        //     groupObject[section.name][row.row][seat.seat]
+        // );
+
+        if (
+          groupObject[section.name] &&
+          groupObject[section.name][row.row] &&
+          groupObject[section.name][row.row][seat.seat]
+        ) {
+          return {
+            ...seat,
+            group: groupObject[section.name][row.row][seat.seat],
+          };
+        } else {
+          return seat;
+        }
+      });
+    });
+  });
+
+  console.log("layoutWithGroups", layoutWithGroups);
+
 
 
 
